@@ -1,12 +1,7 @@
 <h1>create new event</h1>
 
 <%= form_for @event, :url=>{:controller=>'events', :action=>'create'} do |f| %>
-  <%= f.label :name,"Name"%>
-  <%= f.text_field :name%>
-  <br>
-  <%= f.label :name,"Description"%>
-  <%= f.text_area :description %>
-  <br>
+  <%= render :partial=>"form", :locals=>{:f=>f} %>
   <%= f.submit "Create"%>
 <% end %>
 
