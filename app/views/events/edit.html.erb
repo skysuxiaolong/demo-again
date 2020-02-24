@@ -1,0 +1,10 @@
+<h1>Edit Event</h1>
+<%= form_for @event ,:url=>{:controller=>'events',:action=>'update'} do |f| %>
+<%= f.label :name,"Name"%>
+<%= f.text_field :name%>
+<br>
+<%= f.label :description,"Description" %>
+<%= f.text_area :description%>
+<br>
+<%= f.submit "Update"%>
+<% end %>
